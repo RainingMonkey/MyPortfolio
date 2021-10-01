@@ -52,7 +52,9 @@
           <li><a href="#about" class="nav-link scrollto"><span>About Me And My Achievements</span></a></li>
           <li><a href="#portfolio" class="nav-link scrollto"></i><span>Portfolio</span></a></li>
           <li><a href="#services" class="nav-link scrollto"></i> <span>Lists Of My Favorite Things</span></a></li>
+          <li><a href="#javascript" class="nav-link scrollto"></i><span>Javascript Projects</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"></i> <span>Contact And Thank You Note</span></a></li>
+          
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -347,7 +349,52 @@
       </div>
     </section><!-- End Portfolio Section -->
 
-    <!-- ======= Services Section ======= -->
+    <!-- ======= Javascript Projects =======-->
+    <section id="javascript" class="javascript">
+      <div class="container">
+    
+        <div class="section-title">
+          <h2>My Javascript Projects</h2>
+          <p>These are my Javascript Projects</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+            <p class="description">Here are some of my Javascript projects:
+              <canvas id="mycanvas" width='700' height='350' style='border: 1px solid pink'></canvas>
+              <script src="script1.js">
+              </script>
+              <h1>Stroked and regular text</h1>
+              <p>As you can see the canvas displays regular and stroked text.</p>
+              <br>
+              <h1>On Key Event</h1>
+              <p>Enter a key and the background of the textbox will turn red.</p>
+              <input id="text" onkeypress="changebg()">
+              <script>
+                  function changebg() {
+                      document.getElementById("text").style.backgroundColor = "red";
+                  }
+              </script>
+              </script>
+              <body onload="loadevent()">
+                <img id="MyImg" style="width:200px;border:2px solid red">
+                <h1>Click to load image</h1>
+                <script>
+                    function loadevent() {
+                        alert("Click To Load The Images")
+                        document.getElementById("MyImg").src = "Pizza.jpg"
+                    }
+                </script>
+                <p>As you can see, when you open the website, there will be an alert telling you to load images.</p>
+                <br>
+                <p>When you press ok, a image of a pizza will show up.</p>
+
+
+
+          
+
+
+<!-- ======= Services Section ======= -->
     <section id="services" class="services">
       <div class="container">
 
@@ -358,7 +405,7 @@
 
         <div class="row">
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <p class="description">Top Favorite Foods Of Mine:
+            <p class="description">Favorite Foods:
               <li>1. Pizza</li>
               <li>2. Sushi</li>
               <li>3. Noodles</li>
@@ -368,7 +415,7 @@
             </p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-           <p class="description">Top Dream Destinations Of Mine:
+           <p class="description">Dream Destinations:
               <li>1. London</li>
               <li>2. Hawaii</li>
               <li>3. Times Square</li>
@@ -393,6 +440,8 @@
 
       </div>
     </section><!-- End Services Section -->
+     
+
 
     
 
