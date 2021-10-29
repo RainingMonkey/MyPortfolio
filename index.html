@@ -69,6 +69,17 @@
   </section><!-- End Hero -->
 
   <main id="main">
+    <p> The current date is: </p> <h1 id = "demo">
+      <h3 id="demo"></h1>
+      <script>
+          function datedisplay(){
+          var today=new Date();
+          var date=(today.getMonth()+1 )+'-'+today.getDate()+'-'+today.getFullYear();
+          return date;   
+          }    
+          document.getElementById("demo").innerHTML=datedisplay()
+      </script>
+
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -361,10 +372,6 @@
         <div class="row">
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
             <p class="description">Here are some of my Javascript projects:
-              <canvas id="mycanvas" width='700' height='350' style='border: 1px solid pink'></canvas>
-              <script src="script1.js">
-              </script>
-              <h1>Stroked and regular text</h1>
               <p>As you can see the canvas displays regular and stroked text.</p>
               <br>
               <h1>On Key Event</h1>
@@ -389,6 +396,9 @@
                 <br>
                 <p>When you press ok, a image of a pizza will show up.</p>
 
+                
+                
+
 
 
           
@@ -403,34 +413,43 @@
           <p>My favorite things of mine.</p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <p class="description">Favorite Foods:
-              <li>1. Pizza</li>
-              <li>2. Sushi</li>
-              <li>3. Noodles</li>
-              <li>4. Ice Cream</li>
-              <li>5. Cake</li>
-              
-            </p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-           <p class="description">Dream Destinations:
-              <li>1. London</li>
-              <li>2. Hawaii</li>
-              <li>3. Times Square</li>
-              <li>4. Disney Land</li>
-              <li>5. Washington DC</li>
-
-            </p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <p class="description">Top Ice Cream Flavors:
-               <li>1. Chocolate</li>
-               <li>2. Strawberry</li>
-               <li>3. Vanilla</li>
-               <li>4. Mint</li>
-               <li>5. Pistachio</li>
+              <style>
+                table, th, td {
+                  border:1px solid black;
+                }
+                </style>
+               <table style="width:100%">
+                  <tr>
+                    <th>My Dream Destinations</th>
+                    <th>Top Ice Cream Flavors</th>
+                    <th>Favorite Foods</th>
+                  </tr>
+                  <tr>
+                    <td>London</td>
+                    <td>Chocolate</td>
+                    <td>Pizza</td>
+                  </tr>
+                  <tr>
+                    <td>Hawaii</td>
+                    <td>Strawberry</td>
+                    <td>Sushi</td>
+                  </tr>
+                  <tr>
+                    <td>Times Square</td>
+                    <td>Vanilla</td>
+                    <td>Noodles/td>
+                  </tr><tr>
+                    <td>Disney World</td>
+                    <td>Mint</td>
+                    <td>Ice Cream</td>
+                  </tr><tr>
+                    <td>Washington DC</td>
+                    <td>Pistachio</td>
+                    <td>Cake</td>
+                  </tr>
+                </table>
+                
+            
 
 
             </p>
@@ -448,17 +467,44 @@
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
-
+        <form name="myform" action="Erichyjiang@gmail.com" method="post" enctype="text/plain"> 
+          <p>Feedback Form</p><br>
+          <label for="firstname">First Name</label>
+          <input type="text" name="firstname" id="firstname"><br><br>
+          <label for="lastname">Last Name</label>
+          <input type="text" name="lastname" id="lastname"><br><br><br>
+          <label for="email">Email ID</label>
+          <input type="text" name="email" id="email"><br><br><br>
+          <label>How did you get to know my website?</label><br>
+          <input type="checkbox" id="internet" value="internet" name="found"><label for="internet">Internet</label>
+          <input type="checkbox" id="friends" value="friends" name="found"><label for="friends">Friends</label>
+          <input type="checkbox" id="socialmedia" value="socialmedia" name="found"><label for="socialmedia">Social Media</label><br><br><br>
+          <label for="rating">Choose Ratings</label>
+          
+          <label for="msg">Any Suggestions?</label>
+          <textarea name="msg" id="msg" rows="5" cols="20">Enter your suggestions here..</textarea><br><br>
+        
+            
+          <input type="submit" value="Submit">
+          </form>
         <div class="section-title">
           <h2>Conclusion And Thank You Note</h2>
           <p>Thank you for visiting my iPortfolio! I hope you enjoyed reading about my life and my interests!
+          <br>You can tell me how much you enjoyed looking at my iPortfolio
+          <select id="rating" name="rating">
+            <option id="option1" name="option1" value="10">10 out of 10-Unique n Wow!!</option>
+            <option id="option2" name="option2" value="7">7 out of 10-Very good</option>
+            <option id="option3" name="option3" value="5">5 out of 10- Good</option>
+            <option id="option4" name="option4" value="3">3 out of 10-Somewhat good</option>
+            <option id="option5" name="option5" value="1">1 out of 10-Not at all good</option>
+            </select><br><br>
+            <p>Use the submit button above to rate my website.</p>
+          </form>
           <br>
           <br>
           <br>
           <br>
-          <br>
-          <br>
-          <br><small>Hello my name is Eric and I am the maker of the this template, I live in the United States and will be going to 8th grade. If you want to contact me, just go to Erichyjiang@gmail.com</small>
+          <br><small>Hello my name is Eric and I am the maker of the this website, I live in the United States and will be going to 8th grade. If you want to contact me, just go to ASHUAJHDS@Gmail.com</small>
           </p>
         </div>
 
@@ -492,6 +538,7 @@
   <script src="swiper-bundle.min.js"></script>
   <script src="typed.min.js"></script>
   <script src="noframework.waypoints.js"></script>
+
 
   <!-- Template Main JS File -->
   <script src="main.js"></script>
